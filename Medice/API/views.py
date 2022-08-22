@@ -7,7 +7,7 @@ from .models import Usuarios
 
 
 #Criação do views de Usuarios 
-class Usuario(APIView):
+class User(APIView):
     def get (self,request):
 
     def post (self, request):
@@ -16,4 +16,4 @@ class Usuario(APIView):
             return Response ({"status": "success", "data": serializer.data}, status = status.HTTP_200_OK)
         else:
                 return Response({"status": "error", "data": serializer.errors}, status = status.HTTP_400_BAD_REQUEST)
-                
+
