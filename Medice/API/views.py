@@ -10,7 +10,7 @@ from .models import Usuarios
 class User(APIView):
     def get (self,request):
 
-    def post (self, request):
+     def post (self, request):
         serializer = usuario(data = request.data)
         if serializer.is_valid():
             return Response ({"status": "success", "data": serializer.data}, status = status.HTTP_200_OK)
