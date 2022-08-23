@@ -16,4 +16,4 @@ class usuario(serializers.ModelSerializer):
 class paciente(serializers.ModelSerializer):
     class Meta:
         model = Pacientes
-        fiels = ('__all__')
+        fields = '__all__'

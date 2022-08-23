@@ -9,7 +9,7 @@ from .models import Usuarios, Pacientes
 #Criação do views de Usuarios 
 class User(APIView):
     #def get (self,request):
-    def post (self, request):
+     def post (self, request):
         serializers = usuario(data = request.data)
         if serializers.is_valid():
             serializers.save()
@@ -22,12 +22,9 @@ class User(APIView):
 
 class Patient(APIView):
     def post(self, request):
-        serializers = paciente(data = request.data)
-        if serializers.is_valid():
-            serializers.save()
-            return Response({"status": "success", "data": serializers.data}, status = status.HTTP_200_OK)
+        serializer = paciente(data=request.data)
+        if serializer.is_valid():
+            serializer.save()
+            return Response({"status": "success", "data": serializer.data}, status=status.HTTP_200_OK)
         else:
-            return Response({"status": "error", "data": serializers.errors}, status = status.HTTP_400_BAD_REQUEST)
-
-
-
+            return Response({"status": "error", "data": serializer.errors}, status=status.HTTP_400_BAD_REQUEST)
