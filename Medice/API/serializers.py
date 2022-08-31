@@ -11,6 +11,12 @@ class usuario(serializers.ModelSerializer):
         model = Usuarios
         fields = ('__all__')
 
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Usuarios
+        fields = ('__all__')
+
+
  #Criação do serializers de Pacientes
 
 class paciente(serializers.ModelSerializer):
