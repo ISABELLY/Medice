@@ -11,9 +11,5 @@ router = DefaultRouter()
 router.register('',UsuarioViewSet, basename="usuario")
 
 
-# The API URLs are now determined automatically by the router.
-urlpatterns = router.urls
 
-# urlpatterns = [
-#     path('usuario/', UsuarioViewSet.as_view(get)),
-#   ]
+urlpatterns = router.urls
