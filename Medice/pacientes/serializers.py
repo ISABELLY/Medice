@@ -9,8 +9,3 @@ class PacienteSerializer(serializers.ModelSerializer):
 
 
 
-
-# class paciente(serializers.ModelSerializer):
-#     class Meta:
-#         model = Pacientes
-#         fields = '__all__'        

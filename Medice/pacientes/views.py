@@ -13,7 +13,7 @@ class PacienteViewSet(ModelViewSet):
     queryset = Pacientes.objects.all()
     pagination_class = LimitOffsetPagination
 
-    def delete(self, request, id=None):
-        paciente = get_object_or_404(Pacientes, id=id)
-        paciente.delet()
-        return Response({"status": "success", "data": "Item Deleted"})
+    # def delete(self, request, id=None):
+    #     paciente = get_object_or_404(Pacientes, id=id)
+    #     paciente.delet()
+    #     return Response({"status": "success", "data": "Item Deleted"})
